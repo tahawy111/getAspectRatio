@@ -1,5 +1,5 @@
 const aspect = document.getElementById("aspect");
-const btn = document.querySelector(".btn");
+const form = document.querySelector("#form");
 const widthInput = document.getElementById("width");
 const heightInput = document.getElementById("height");
 
@@ -13,7 +13,8 @@ const getAspectRatio = (width, height) => {
   return aspect;
 };
 
-btn.addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   const aspectValues = getAspectRatio(widthInput.value, heightInput.value);
   aspect.innerHTML = `${aspectValues.numerator}:${aspectValues.denominator}`;
 });

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="area.svg" />
     <title>GET ASPECT RATIO</title>
     <style>
       body {
@@ -55,21 +56,23 @@
     </style>
   </head>
   <body>
-    <div class="main">
-      <h3 style="text-align: center">Get Aspect Ratio</h3>
-      <div style="padding: 5px">
-        <label for="width">Width: </label>
-        <input type="number" id="width" />
-        <label for="height">Height: </label>
-        <input type="number" id="height" />
+    <form id="form">
+      <div class="main">
+        <h3 style="text-align: center">Get Aspect Ratio</h3>
+        <div style="padding: 5px">
+          <label for="width">Width: </label>
+          <input type="number" id="width" />
+          <label for="height">Height: </label>
+          <input type="number" id="height" />
+        </div>
+        <button type="submit" class="btn">Calculate</button>
+        <span style="margin: 5px auto">Aspect Ratio: </span>
+        <div
+          style="text-align: center; color: red; font-weight: bolder"
+          id="aspect"
+        ></div>
       </div>
-      <button class="btn">Calculate</button>
-      <span style="margin: 5px auto">Aspect Ratio: </span>
-      <div
-        style="text-align: center; color: red; font-weight: bolder"
-        id="aspect"
-      ></div>
-    </div>
+    </form>
     <script src="./main.js"></script>
   </body>
 </html>
